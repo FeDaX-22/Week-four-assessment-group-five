@@ -5,7 +5,12 @@ function clearScreen() {
 
 // This function display values
 function display(value) {
-  document.getElementById("result").value += value;
+  let variable = document.getElementById("result").value;
+  if (variable == 0) {
+    variable = '';
+  }
+  variable = variable + value;
+  document.getElementById("result").value = variable;
 }
 
 // This function evaluates the expression and returns result
